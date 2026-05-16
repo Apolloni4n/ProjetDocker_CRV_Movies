@@ -1,0 +1,32 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb_local
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build: ./backend/
+    container_name: movie_backend
+    ports:
+      - "3001:3001"
+    # On laisse les volumes commentés pour être SUR que Docker utilise les modules qu'il installe lui-même
+    # volumes:
+    #   - ./backend:/app
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/MovieApp
+    depends_on:
+      - mongodb
+
+  frontend:
+    build: ./app/
+    container_name: movie_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+volumes:
+  mongo_data:

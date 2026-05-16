@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #0b1026, #1e1b4b, #4c1d95, #a855f7);
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(168, 85, 247, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(99, 102, 241, 0.20), transparent 50%);
+}
+.accueil {
+  gap: 12px;
+}
+
+.accueil input {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #a855f7;
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 18px;
+  width: 280px;
+  height: 35px;
+}
+
+.accueil button {
+  padding: 10px 24px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}

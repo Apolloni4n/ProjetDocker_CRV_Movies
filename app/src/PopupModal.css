@@ -1,0 +1,143 @@
+.new-question{
+    position: relative;
+    max-height: 100vh;
+}
+.new-quesiton-form{
+    z-index: 5000;
+    width:80vw;
+    min-height: 80vh;
+    position: fixed;
+    top: 0%;
+    left:10%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px -8px black;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+}
+.popup-project_item{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.details{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    text-align: start;
+}
+.detail-rating{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-align: start;
+    align-content: flex-start;
+}
+.detail-rating>img{
+    margin-right:5px;
+}
+p{
+    margin-bottom: 8px;
+}
+.popup-image_item>img{
+    object-fit: cover;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#cross{
+    min-width: 40px ;
+    min-height: 40px ;
+    font-weight: bold;
+    position: absolute;
+    right: 11%;
+    padding: 2px;
+    border-radius: 3px;
+    border: grey;
+    outline: none;
+}
+
+#cross:hover{
+    background-color: red;
+    color: white;
+}
+
+.new-quesiton-form>label{
+    font-weight: 500;
+}
+
+
+.new-quesiton-form>textarea{
+    margin-top: 10px;
+    height: 80px;
+}
+
+.btnFooter{
+    margin-top: 10px;
+    background-color: crimson;
+    color: white;
+    width: 250px;
+}
+
+.images-data{
+    /* height: 200px; */
+    overflow-y: hidden;
+    overflow-x:scroll;
+    display: flex;
+}
+.review-data{
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
+}
+.review-container{
+    margin: 10px;
+    border-bottom: 1px solid grey;
+}
+.username-rating{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    
+}
+.username-rating>h5{
+    margin: 10px 15px;
+}
+span{
+    font-size: large;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 860px) {
+    .new-quesiton-form{
+        width:80vw;
+        left:-20%;
+        padding: 30px 70px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .new-quesiton-form{
+        left:0%;
+    }
+   .new-quesiton-form{
+    padding: 20px 40px;;
+    }
+}
